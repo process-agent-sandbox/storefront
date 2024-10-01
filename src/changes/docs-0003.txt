@@ -1,1 +1,2 @@
 Refactor docs (3): step 1
+Refactor docs (3): step 2
