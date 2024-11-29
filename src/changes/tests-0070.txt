@@ -1,1 +1,2 @@
 Refactor tests (70): step 1
+Refactor tests (70): step 2
