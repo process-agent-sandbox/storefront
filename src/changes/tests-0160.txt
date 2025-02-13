@@ -1,1 +1,2 @@
 Refactor tests (160): step 1
+Refactor tests (160): step 2
