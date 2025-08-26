@@ -1,1 +1,2 @@
 Fix ui (378): step 1
+Fix ui (378): step 2
