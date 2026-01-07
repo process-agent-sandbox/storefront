@@ -1,1 +1,2 @@
 Refactor core (537): step 1
+Refactor core (537): step 2
