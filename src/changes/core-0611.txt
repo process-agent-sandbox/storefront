@@ -1,1 +1,2 @@
 Refactor core (611): step 1
+Refactor core (611): step 2
