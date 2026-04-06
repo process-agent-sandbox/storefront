@@ -1,3 +1,0 @@
-Add ui (640): step 1
-Add ui (640): step 2
-Add ui (640): step 3
