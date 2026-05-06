@@ -1,1 +1,2 @@
 Refactor core (675): step 1
+Refactor core (675): step 2
