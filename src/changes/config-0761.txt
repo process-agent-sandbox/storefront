@@ -1,3 +1,0 @@
-Refactor config (761): step 1
-Refactor config (761): step 2
-Refactor config (761): step 3
