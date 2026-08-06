@@ -1,1 +1,2 @@
 Refactor api (778): step 1
+Refactor api (778): step 2
