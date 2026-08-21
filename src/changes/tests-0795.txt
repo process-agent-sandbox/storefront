@@ -1,1 +1,2 @@
 Refactor tests (795): step 1
+Refactor tests (795): step 2
