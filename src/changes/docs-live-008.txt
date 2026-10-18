@@ -1,1 +1,2 @@
 Refactor docs (live 8): step 1
+Cover the empty basket case
