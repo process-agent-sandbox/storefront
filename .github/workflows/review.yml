@@ -1,0 +1,32 @@
+name: Review
+
+# Sandbox only: a second reviewer, so pull requests can be reviewed by someone other than their author.
+# Adding the label review:approve, review:comment or review:changes makes github-actions[bot] submit that
+# review; the label is then removed. Needs "Allow GitHub Actions to create and approve pull requests".
+on:
+  pull_request:
+    types: [labeled]
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  review:
+    if: startsWith(github.event.label.name, 'review:')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Submit the review the label asks for
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          LABEL: ${{ github.event.label.name }}
+          PR: ${{ github.event.pull_request.number }}
+        run: |
+          case "$LABEL" in
+            review:approve) gh pr review "$PR" --approve --body "Looks good to me." ;;
+            review:comment) gh pr review "$PR" --comment --body "A couple of questions before I approve; nothing blocking yet." ;;
+            review:changes) gh pr review "$PR" --request-changes --body "Please cover the empty basket case before this goes in." ;;
+            *) echo "Unknown review label $LABEL"; exit 1 ;;
+          esac
+          gh api --method DELETE "repos/$GH_REPO/issues/$PR/labels/${LABEL/:/%3A}" --silent
